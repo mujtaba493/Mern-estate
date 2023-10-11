@@ -1,11 +1,24 @@
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import React from 'react'
+import Home from './pages/Home'
+import About from './pages/About'
+import Profile from './pages/Profile'
+import Signin from './pages/Signin'
+import Signup from './pages/Signup'
 
 const App = () => {
   return (
-    <div>
-      <h1 className='text-red-500'>App</h1>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element ={<Home />} />
+      <Route path='/About' element ={<About />} />
+      <Route path='/Profile' element ={<Profile />} />
+      <Route path='/Sign-in' element ={<Signin />} />
+      <Route path='/Sign-up' element ={<Signup />} />
+
+    </Routes>
       
-    </div>
+    </BrowserRouter>
   )
 }
 
